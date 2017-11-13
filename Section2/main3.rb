@@ -6,6 +6,9 @@ require './donothing.rb'
 require './assign.rb'
 require './if.rb'
 require './sequence.rb'
+require './while.rb'
+require './lessthan.rb'
+require './multiply.rb'
 require './machine.rb'
 
 Machine.new(
@@ -20,4 +23,13 @@ Machine.new(
     Assign.new(:y, Add.new(Variable.new(:x), Number.new(3)))
   ),
   {}
+).run
+
+puts "-------- While ---------"
+Machine.new(
+  While.new(
+    LessThan.new(Variable.new(:x), Number.new(5)),
+    Assign.new(:x, Multiply.new(Variable.new(:x), Number.new(3)))
+  ),
+  {x: Number.new(1)}
 ).run
