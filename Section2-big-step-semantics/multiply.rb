@@ -2,7 +2,7 @@ require './number.rb'
 
 class Multiply < Struct.new(:left, :right)
   def to_s
-    "#{left} + #{right}"
+    "#{left} * #{right}"
   end
 
   def inspect
