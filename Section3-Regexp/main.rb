@@ -25,3 +25,7 @@ puts '----------matches------------'
 
 p Empty.new.matches?('a')
 p Literal.new('a').matches?('a')
+pattern = Concatenate.new(Literal.new('a'), Literal.new('b'))
+p pattern.matches?('a')
+p pattern.matches?('ab')
+p pattern.matches?('abc')
