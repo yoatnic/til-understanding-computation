@@ -29,3 +29,10 @@ pattern = Concatenate.new(Literal.new('a'), Literal.new('b'))
 p pattern.matches?('a')
 p pattern.matches?('ab')
 p pattern.matches?('abc')
+
+puts '----------choose------------'
+
+p pattern = Choose.new(Literal.new('a'), Literal.new('b'))
+p pattern.matches?('a')
+p pattern.matches?('b')
+p pattern.matches?('c')
