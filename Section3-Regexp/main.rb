@@ -36,3 +36,11 @@ p pattern = Choose.new(Literal.new('a'), Literal.new('b'))
 p pattern.matches?('a')
 p pattern.matches?('b')
 p pattern.matches?('c')
+
+puts '----------repeat------------'
+p pattern = Repeat.new(Literal.new('a'))
+p pattern.matches?('')
+p pattern.matches?('a')
+p pattern.matches?('aaaaaa')
+p pattern.matches?('b')
+p pattern.matches?('aab')
